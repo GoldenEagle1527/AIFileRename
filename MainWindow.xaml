@@ -1,0 +1,31 @@
+﻿<Window x:Class="AIFileRename.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AIFileRename"
+        mc:Ignorable="d"
+        Title="AI文件翻译" Height="450" Width="800" Icon="/Icon_Black.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBox IsHitTestVisible="False" IsReadOnly="True" Background="Transparent" BorderThickness="0,0,0,0" Text="B站金雕king制作" />
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="ThemeChangeButton" FontFamily="{StaticResource SymbolThemeFontFamily}" Content="&#xEA3A;" Click="ThemeChange" />
+                <Button x:Name="TranslationButton" FontFamily="{StaticResource SymbolThemeFontFamily}" Content="&#xE80F;" Click="OpenTranslationPage" />
+                <Button x:Name="SettingButton" FontFamily="{StaticResource SymbolThemeFontFamily}" Content="&#xE713;" Click="OpenSettingPage" />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Frame x:Name="MainFrame">
+            </Frame>
+        </Grid>
+    </Grid>
+</Window>

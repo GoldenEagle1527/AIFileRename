@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Icon_Black.ico</ApplicationIcon>
+    <SignAssembly>False</SignAssembly>
+    <Authors>金雕king</Authors>
+    <Company>B站$(Authors)</Company>
+    <Description>AI文件重命名助手</Description>
+    <Copyright>由金雕king个人所有,免费使用,MIT许可</Copyright>
+    <RepositoryType>https://github.com/GoldenEagle1527/AIFileRename.git</RepositoryType>
+    <RepositoryUrl>https://github.com/GoldenEagle1527/AIFileRename</RepositoryUrl>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icon_Black.ico" />
+    <None Remove="Icon_Black.png" />
+    <None Remove="Icon_White.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Icon_Black.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icon_Black.ico" />
+    <Resource Include="Icon_Black.png" />
+    <Resource Include="Icon_White.png" />
+  </ItemGroup>
+
+</Project>
