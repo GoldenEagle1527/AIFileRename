@@ -1,37 +1,45 @@
-using System.ComponentModel;
-
-public class FileItem
+namespace AIFileRename
 {
-    private string originalFileName;
-    private string renamedFileName;
-
-    public string OriginalFileName
+    public class FileItem(string originalFileName, string aiRenamedFileName, string regularRenamedFileName)
     {
-        get => originalFileName;
-        set
+        private string _originalFileName = originalFileName;
+        private string _aiRenamedFileName = aiRenamedFileName;
+        private string _regularRenamedFileName = regularRenamedFileName;
+
+        public string OriginalFileName
         {
-            if (originalFileName != value)
+            get => _originalFileName;
+            set
             {
-                originalFileName = value;
+                if (_originalFileName != value)
+                {
+                    _originalFileName = value;
+                }
             }
         }
-    }
 
-    public string RenamedFileName
-    {
-        get => renamedFileName;
-        set
+        public string AIRenamedFileName
         {
-            if (renamedFileName != value)
+            get => _aiRenamedFileName;
+            set
             {
-                renamedFileName = value;
+                if (_aiRenamedFileName != value)
+                {
+                    _aiRenamedFileName = value;
+                }
             }
         }
-    }
 
-    public FileItem(string originalFileName, string renamedFileName)
-    {
-        OriginalFileName = originalFileName;
-        RenamedFileName = renamedFileName;
+        public string RegularRenamedFileName
+        {
+            get => _regularRenamedFileName;
+            set
+            {
+                if (_regularRenamedFileName != value)
+                {
+                    _regularRenamedFileName = value;
+                }
+            }
+        }
     }
 }

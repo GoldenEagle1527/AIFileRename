@@ -24,6 +24,7 @@ namespace AIFileRename
         public static bool isDarkTheme;
         public static TranslationPage TranslationPage = null!;
         public static SettingPage SettingPage = null!;
+        public static ChatPage ChatPage = null!;
 
         public MainWindow()
         {
@@ -48,6 +49,7 @@ namespace AIFileRename
             }
             TranslationPage = new();
             SettingPage = new();
+            ChatPage = new();
             MainFrame.Navigate(TranslationPage);
             Icon = isDarkTheme ? new BitmapImage(new Uri("pack://application:,,,/Icon_Black.png")) : new BitmapImage(new Uri("pack://application:,,,/Icon_White.png"));
         }
@@ -68,6 +70,11 @@ namespace AIFileRename
         private void OpenTranslationPage(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(TranslationPage);
+        }
+
+        private void OpenChatPage(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(ChatPage);
         }
     }
 }

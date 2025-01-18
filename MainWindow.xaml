@@ -8,7 +8,7 @@
         Title="AI文件翻译" Height="450" Width="800" Icon="/Icon_Black.png">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="32" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
@@ -16,15 +16,16 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <TextBox IsHitTestVisible="False" IsReadOnly="True" Background="Transparent" BorderThickness="0,0,0,0" Text="B站金雕king制作" />
+            <Label Content="B站金雕king制作" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2,0,0,0" />
             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button x:Name="ThemeChangeButton" FontFamily="{StaticResource SymbolThemeFontFamily}" Content="&#xEA3A;" Click="ThemeChange" />
-                <Button x:Name="TranslationButton" FontFamily="{StaticResource SymbolThemeFontFamily}" Content="&#xE80F;" Click="OpenTranslationPage" />
-                <Button x:Name="SettingButton" FontFamily="{StaticResource SymbolThemeFontFamily}" Content="&#xE713;" Click="OpenSettingPage" />
+                <Button x:Name="ThemeChangeButton" FontFamily="{StaticResource SymbolThemeFontFamily}" Content="&#xEA3A;" Click="ThemeChange" Padding="4,4,4,4" />
+                <Button x:Name="TranslationButton" FontFamily="{StaticResource SymbolThemeFontFamily}" Content="&#xE80F;" Click="OpenTranslationPage" Padding="4,4,4,4" />
+                <Button x:Name="ChatButton" FontFamily="{StaticResource SymbolThemeFontFamily}" Content="&#xE8BD;" Click="OpenChatPage" Padding="4,4,4,4" />
+                <Button x:Name="SettingButton" FontFamily="{StaticResource SymbolThemeFontFamily}" Content="&#xE713;" Click="OpenSettingPage" Padding="4,4,4,4" />
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
-            <Frame x:Name="MainFrame">
+            <Frame x:Name="MainFrame" BorderThickness="0,2,0,0">
             </Frame>
         </Grid>
     </Grid>
